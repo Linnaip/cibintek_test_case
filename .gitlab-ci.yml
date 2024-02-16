@@ -1,0 +1,14 @@
+stages:
+  -build
+  -publish
+
+build:
+  stage: build
+  script:
+    - echo "Building application"
+    - docker build my_hello ./app
+
+publish:
+  stage: publish
+  script:
+    - echo "Deploy"
